@@ -1,0 +1,21 @@
+.wrapper-services-section{
+    margin-top: 210px;
+
+    .services-heading{
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    .boxes{
+        background: linear-gradient(to bottom right, #1C1C1C, #050505);
+        border-radius: 15px;
+    }
+    
+}
+
+.dark .wrapper-services-section{
+
+    .boxes{
+        background: linear-gradient(to bottom right, #262a30, #141313);
+    }
+}

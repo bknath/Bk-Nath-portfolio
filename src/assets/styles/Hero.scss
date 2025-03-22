@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.wrapper-home-section {
+    background-image: url('@/assets/herobglight.svg');
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .content {
+        position: relative;
+        z-index: 2;
+    }
+
+    .namehead {
+        font-size: 62px;
+        line-height: 91px;
+        color: #484E53;
+
+    }
+
+    .designation {
+        @keyframes lights {
+            0% {
+                color: hsl(230, 40%, 80%);
+                text-shadow:
+                    0 0 1em hsla(320, 100%, 50%, 0.2),
+                    0 0 0.125em hsla(320, 100%, 60%, 0.3),
+                    -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+                    1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+            }
+
+            30% {
+                color: hsl(230, 80%, 90%);
+                text-shadow:
+                    0 0 1em hsla(320, 100%, 50%, 0.5),
+                    0 0 0.125em hsla(320, 100%, 60%, 0.5),
+                    -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+                    0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+            }
+
+            40% {
+                color: hsl(230, 100%, 95%);
+                text-shadow:
+                    0 0 1em hsla(320, 100%, 50%, 0.5),
+                    0 0 0.125em hsla(320, 100%, 90%, 0.5),
+                    -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+                    0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+            }
+
+            70% {
+                color: hsl(230, 80%, 90%);
+                text-shadow:
+                    0 0 1em hsla(202, 100%, 50%, 0.5),
+                    0 0 0.125em hsla(213, 100%, 60%, 0.5),
+                    0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+                    -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+            }
+
+            100% {
+                color: hsl(230, 40%, 80%);
+                text-shadow:
+                    0 0 1em hsla(320, 100%, 50%, 0.2),
+                    0 0 0.125em hsla(320, 100%, 60%, 0.3),
+                    1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+                    -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+            }
+        }
+
+        font-size: 2.5rem;
+        font-weight: 300;
+        animation: lights 5s 750ms linear infinite;
+        text-align: center;
+    }
+
+    .intropara {
+        font-size: 16px;
+        line-height: 28px;
+        font-family: 'Montserrat';
+        font-weight: 400;
+    }
+}
+
+.dark .wrapper-home-section {
+    background-image: url('@/assets/herobg.svg');
+
+    .namehead {
+        color: #fff;
+    }
+}

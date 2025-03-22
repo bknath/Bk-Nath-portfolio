@@ -1,0 +1,202 @@
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in-down {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-out-down {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+}
+
+@keyframes fade-out-up {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+}
+
+@keyframes fade-out-left {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+}
+
+@keyframes fade-out-right {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+}
+
+@keyframes fade-out-top-left {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        transform: translate(-30px, -30px);
+    }
+}
+
+@keyframes fade-out-top-right {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        transform: translate(30px, -30px);
+    }
+}
+
+@keyframes fade-in-up-slow {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Assign classes to use in components
+.animation-fadein {
+    animation: fade-in 1.5s ease-in-out forwards;
+}
+
+.animation-fadeout {
+    animation: fade-out 1.5s ease-out forwards;
+}
+
+.animation-fadeindown {
+    animation: fade-in-down 1.5s ease-in forwards;
+}
+
+.animation-fadeinup {
+    animation: fade-in-up 1.5s ease-in-out forwards;
+}
+
+.animation-fadeinleft {
+    animation: fade-in-left 1.5s ease-in-out forwards;
+}
+
+.animation-fadeinright {
+    animation: fade-in-right 1.5s ease-in-out forwards;
+}
+
+.animation-fadeoutdown {
+    animation: fade-out-down 1.5s ease-in-out forwards;
+}
+
+.animation-fadeoutup {
+    animation: fade-out-up 1.5s ease-in-out forwards;
+}
+
+.animation-fadeoutleft {
+    animation: fade-out-left 1.5s ease-in-out forwards;
+}
+
+.animation-fadeoutright {
+    animation: fade-out-right 1.5s ease-in-out forwards;
+}
+
+.animation-fadeouttopleft {
+    animation: fade-out-top-left 1.5s ease-in-out forwards;
+}
+
+.animation-fadeouttopright {
+    animation: fade-out-top-right 1.5s ease-in-out forwards;
+}
+
+.animation-fadein-up-slow {
+    animation: fade-in-up-slow 2s ease-in-out forwards;
+}
+
+.opacity-0 {
+    opacity: 0;
+}
