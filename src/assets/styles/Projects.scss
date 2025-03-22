@@ -1,0 +1,16 @@
+.wrapper-project-section {
+    margin-top: 210px;
+    margin-bottom: 200px;
+
+    .boxes{
+        padding-top: 0;
+    }
+
+}
+
+.dark .wrapper-project-section {
+
+    .boxes {
+        background: linear-gradient(to bottom right, #262a30, #141313);
+    }
+}

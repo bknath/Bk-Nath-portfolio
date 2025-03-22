@@ -67,8 +67,9 @@ const Navbar = () => {
                 <ul className='navlinks flex gap-8'>
                     <li><Link to="/#home" onClick={() => handleScroll("hero")} className={activeSection === "#hero" ? 'active' : ''}>Home</Link></li>
                     <li><Link to="/#about" onClick={() => handleScroll("about")} className={activeSection === "#about" ? 'active' : ''}>About Us</Link></li>
-                    <li><Link to="/#projects" onClick={() => handleScroll("projects")} className={activeSection === "#projects" ? 'active' : ''}>Projects</Link></li>
                     <li><Link to="/#services" onClick={() => handleScroll("services")} className={activeSection === "#services" ? 'active' : ''}>Services</Link></li>
+                    <li><Link to="/#projects" onClick={() => handleScroll("projects")} className={activeSection === "#projects" ? 'active' : ''}>Projects</Link></li>
+
                     <li><Link to="/#resume" onClick={() => handleScroll("resume")} className={activeSection === "#resume" ? 'active' : ''}>Resume</Link></li>
                 </ul>
                 <div className='navlinks2 flex items-center'>
