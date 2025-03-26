@@ -6,14 +6,32 @@
         font-weight: bold;
     }
 
+    .get-to-know{
+        background: linear-gradient(to right, #22d3ee, #4f46e5);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
     .boxes{
-        background: linear-gradient(to bottom right, #1C1C1C, #050505);
+        background: linear-gradient(to bottom right, #e2e8f0, #ced8e9);
         border-radius: 15px;
+
+        p{
+            font-size: 11.5px;
+        }
     }
     
 }
 
 .dark .wrapper-services-section{
+
+    .get-to-know {
+        background: linear-gradient(to right, #22d3ee, #f8fafc);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
 
     .boxes{
         background: linear-gradient(to bottom right, #262a30, #141313);

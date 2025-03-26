@@ -45,11 +45,11 @@ const Services = () => {
                 <div className="grid grid-cols-3 gap-6 p-4">
                     {/* 1st Box */}
                     <FadeInSection animationClass="animation-fadein">
-                        <div className="boxes w-80 h-80 flex items-center justify-center dark:border border-[#2B2B2B]">
+                        <div className="boxes w-70 h-70 flex items-center justify-center dark:border border-[#2B2B2B]">
                             <div className="flex flex-col items-center text-center justify-center">
                                 <img className="pb-4" src={assets.servicesIcon} alt="" />
-                                <h3 className="text-2xl pb-4">Web Development</h3>
-                                <p className="text-xs w-3xs">
+                                <h3 className="text-xl pb-4">Web Development</h3>
+                                <p className="w-3xs">
                                     From data inception to actionable insights, I design
                                     compelling analytics and visualization solutions that
                                     illuminate trends, empower decision-making, and drive your
@@ -61,11 +61,11 @@ const Services = () => {
 
                     {/* 2nd Box */}
                     <FadeInSection animationClass="animation-fadeinleft">
-                        <div className="boxes w-80 h-80 flex items-center justify-center dark:border border-[#2B2B2B]">
+                        <div className="boxes w-70 h-70 flex items-center justify-center dark:border border-[#2B2B2B]">
                             <div className="flex flex-col items-center text-center justify-center">
                                 <img className="pb-4" src={assets.servicesIcon} alt="" />
-                                <h3 className="text-2xl pb-4">UI/UX Designer</h3>
-                                <p className="text-xs w-3xs">
+                                <h3 className="text-xl pb-4">UI/UX Designer</h3>
+                                <p className="w-3xs">
                                     From data inception to actionable insights, I design
                                     compelling analytics and visualization solutions that
                                     illuminate trends, empower decision-making, and drive your
@@ -77,11 +77,11 @@ const Services = () => {
 
                     {/* 3rd Box */}
                     <FadeInSection animationClass="animation-fadeinright">
-                        <div className="boxes w-80 h-80 flex items-center justify-center dark:border border-[#2B2B2B]">
+                        <div className="boxes w-70 h-70 flex items-center justify-center dark:border border-[#2B2B2B]">
                             <div className="flex flex-col items-center text-center justify-center">
                                 <img className="pb-4" src={assets.servicesIcon} alt="" />
-                                <h3 className="text-2xl pb-4">Graphic Designer</h3>
-                                <p className="text-xs w-3xs">
+                                <h3 className="text-xl pb-4">Graphic Designer</h3>
+                                <p className="w-3xs">
                                     From data inception to actionable insights, I design
                                     compelling analytics and visualization solutions that
                                     illuminate trends, empower decision-making, and drive your
@@ -93,11 +93,11 @@ const Services = () => {
 
                     {/* 4th Box */}
                     <FadeInSection animationClass="animation-fadeinup">
-                        <div className="boxes w-80 h-80 flex items-center justify-center dark:border border-[#2B2B2B]">
+                        <div className="boxes w-70 h-70 flex items-center justify-center dark:border border-[#2B2B2B]">
                             <div className="flex flex-col items-center text-center justify-center">
                                 <img className="pb-4" src={assets.servicesIcon} alt="" />
-                                <h3 className="text-2xl pb-4">Video Editing</h3>
-                                <p className="text-xs w-3xs">
+                                <h3 className="text-xl pb-4">Video Editing</h3>
+                                <p className="w-3xs">
                                     From data inception to actionable insights, I design
                                     compelling analytics and visualization solutions that
                                     illuminate trends, empower decision-making, and drive your
@@ -109,11 +109,11 @@ const Services = () => {
 
                     {/* 5th Box */}
                     <FadeInSection animationClass="animation-fadeindown">
-                        <div className="boxes w-80 h-80 flex items-center justify-center dark:border border-[#2B2B2B]">
+                        <div className="boxes w-70 h-70 flex items-center justify-center dark:border border-[#2B2B2B]">
                             <div className="flex flex-col items-center text-center justify-center">
                                 <img className="pb-4" src={assets.servicesIcon} alt="" />
-                                <h3 className="text-2xl pb-4">Server Management</h3>
-                                <p className="text-xs w-3xs">
+                                <h3 className="text-xl pb-4">Server Management</h3>
+                                <p className="w-3xs">
                                     From data inception to actionable insights, I design
                                     compelling analytics and visualization solutions that
                                     illuminate trends, empower decision-making, and drive your
@@ -125,11 +125,11 @@ const Services = () => {
 
                     {/* 6th Box */}
                     <FadeInSection animationClass="animation-fadeinright">
-                        <div className="boxes w-80 h-80 flex items-center justify-center dark:border border-[#2B2B2B]">
+                        <div className="boxes w-70 h-70 flex items-center justify-center dark:border border-[#2B2B2B]">
                             <div className="flex flex-col items-center text-center justify-center">
                                 <img className="pb-4" src={assets.servicesIcon} alt="" />
-                                <h3 className="text-2xl pb-4">Web Development</h3>
-                                <p className="text-xs w-3xs">
+                                <h3 className="text-xl pb-4">Web Development</h3>
+                                <p className="w-3xs">
                                     From data inception to actionable insights, I design
                                     compelling analytics and visualization solutions that
                                     illuminate trends, empower decision-making, and drive your
