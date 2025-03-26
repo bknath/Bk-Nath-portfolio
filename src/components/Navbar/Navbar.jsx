@@ -19,40 +19,45 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleNavbarScroll);
     }, []);
 
-    // Scroll to section when clicking a link
-    const handleScroll = (id) => {
+    const handleScrollToSection = (id) => {
         const section = document.getElementById(id);
         if (section) {
             const yOffset = -80; // Offset for fixed navbar
             const y = section.getBoundingClientRect().top + window.scrollY + yOffset;
             window.scrollTo({ top: y, behavior: "smooth" });
+    
+            // Manually set active section
             setActiveSection(`#${id}`);
         }
     };
-
-    // Update active section based on scroll position
-    useEffect(() => {
-        const sections = ["hero", "about", "projects", "services", "resume"];
-        
-        const handleScroll = () => {
-            let currentSection = "#hero"; // Default
-
-            sections.forEach((id) => {
-                const section = document.getElementById(id);
-                if (section) {
-                    const sectionTop = section.getBoundingClientRect().top;
-                    if (sectionTop < window.innerHeight / 2) {
-                        currentSection = `#${id}`;
-                    }
+    
+    const detectActiveSectionOnScroll = () => {
+        const sections = ["hero", "about", "services", "projects", "resume"];
+        let active = null;
+    
+        sections.forEach((id) => {
+            const section = document.getElementById(id);
+            if (section) {
+                const { top, bottom } = section.getBoundingClientRect();
+                
+                // Check if section is in viewport
+                if (top <= window.innerHeight / 2 && bottom >= window.innerHeight / 2) {
+                    active = `#${id}`;
                 }
-            });
-
-            setActiveSection(currentSection);
-        };
-
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+            }
+        });
+    
+        // Only update if a section is found
+        if (active && active !== activeSection) {
+            setActiveSection(active);
+        }
+    };
+    
+    useEffect(() => {
+        window.addEventListener("scroll", detectActiveSectionOnScroll);
+        return () => window.removeEventListener("scroll", detectActiveSectionOnScroll);
+    }, [activeSection]);
+    
 
     const handleLogoClick = () => {
             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -65,12 +70,12 @@ const Navbar = () => {
                     <Link to="/" onClick={handleLogoClick}>BKnath</Link>
                 </h2>
                 <ul className='navlinks flex gap-8'>
-                    <li><Link to="/#home" onClick={() => handleScroll("hero")} className={activeSection === "#hero" ? 'active' : ''}>Home</Link></li>
-                    <li><Link to="/#about" onClick={() => handleScroll("about")} className={activeSection === "#about" ? 'active' : ''}>About Us</Link></li>
-                    <li><Link to="/#services" onClick={() => handleScroll("services")} className={activeSection === "#services" ? 'active' : ''}>Services</Link></li>
-                    <li><Link to="/#projects" onClick={() => handleScroll("projects")} className={activeSection === "#projects" ? 'active' : ''}>Projects</Link></li>
+                    <li><Link to="/#home" onClick={() => handleScrollToSection("hero")} className={activeSection === "#hero" ? 'active' : ''}>Home</Link></li>
+                    <li><Link to="/#about" onClick={() => handleScrollToSection("about")} className={activeSection === "#about" ? 'active' : ''}>About Us</Link></li>
+                    <li><Link to="/#services" onClick={() => handleScrollToSection("services")} className={activeSection === "#services" ? 'active' : ''}>Services</Link></li>
+                    <li><Link to="/#projects" onClick={() => handleScrollToSection("projects")} className={activeSection === "#projects" ? 'active' : ''}>Projects</Link></li>
 
-                    <li><Link to="/#resume" onClick={() => handleScroll("resume")} className={activeSection === "#resume" ? 'active' : ''}>Resume</Link></li>
+                    <li><Link to="/#resume" onClick={() => handleScrollToSection("resume")} className={activeSection === "#resume" ? 'active' : ''}>Resume</Link></li>
                 </ul>
                 <div className='navlinks2 flex items-center'>
                     <Button variant="outline" className="cursor-pointer">Contact Me</Button>
