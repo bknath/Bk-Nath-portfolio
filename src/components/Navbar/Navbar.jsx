@@ -32,7 +32,7 @@ const Navbar = () => {
     };
     
     const detectActiveSectionOnScroll = () => {
-        const sections = ["hero", "about", "services", "projects", "resume"];
+        const sections = ["hero", "about", "services", "projects", "contact"];
         let active = null;
     
         sections.forEach((id) => {
@@ -75,10 +75,10 @@ const Navbar = () => {
                     <li><Link to="/#services" onClick={() => handleScrollToSection("services")} className={activeSection === "#services" ? 'active' : ''}>Services</Link></li>
                     <li><Link to="/#projects" onClick={() => handleScrollToSection("projects")} className={activeSection === "#projects" ? 'active' : ''}>Projects</Link></li>
 
-                    <li><Link to="/#resume" onClick={() => handleScrollToSection("resume")} className={activeSection === "#resume" ? 'active' : ''}>Resume</Link></li>
+                    <li><Link to="/#resume" onClick={() => handleScrollToSection("contact")} className={activeSection === "#contact" ? 'active' : ''}>Contact Me</Link></li>
                 </ul>
                 <div className='navlinks2 flex items-center'>
-                    <Button variant="outline" className="cursor-pointer">Contact Me</Button>
+                    <Button variant="outline" className="cursor-pointer">Resume</Button>
                     <ThemeToggle />
                 </div>
             </nav>

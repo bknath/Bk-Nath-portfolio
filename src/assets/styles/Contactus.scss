@@ -1,0 +1,88 @@
+.contact-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+
+    .contact-heading{
+        font-size: 3rem;
+        text-align: center;
+        font-weight: bold;
+    }
+    .get-to-know{
+        background: linear-gradient(to right, #22d3ee, #4f46e5);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+.contact-card {
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+}
+// .contact-item{
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-start;
+//     gap: 10px;
+// }
+.contact-item-heading{
+    font-size: 14px;
+    color: #000000;
+    padding-bottom: 10px;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+.FormCustom{
+    padding: 20px 20px;
+    border-radius: 30px;
+    border: 1px solid #000000;
+}
+.FormCustom-txt{
+    padding: 15px 20px;
+    border-radius: 20px;
+    height: 110px;
+    border: 1px solid #000000;
+}
+
+.dark .contact-container{
+
+    .get-to-know {
+        background: linear-gradient(to right, #22d3ee, #f8fafc);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    .contact-item-heading{
+        color: #e1dfdf;
+    }
+    
+    .FormCustom, .FormCustom-txt{
+        border: 1px solid #ccc
+    }
+}

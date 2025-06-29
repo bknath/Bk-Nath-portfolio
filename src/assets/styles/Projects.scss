@@ -5,10 +5,28 @@
     .boxes{
         padding-top: 0;
     }
+    .project-heading{
+        font-size: 3rem;
+        text-align: center;
+        font-weight: bold;
+    }
+    .get-to-know{
+        background: linear-gradient(to right, #22d3ee, #4f46e5);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
 
 }
 
 .dark .wrapper-project-section {
+
+    .get-to-know {
+        background: linear-gradient(to right, #22d3ee, #f8fafc);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
 
     .boxes {
         background: linear-gradient(to bottom right, #262a30, #141313);

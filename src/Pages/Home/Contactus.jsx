@@ -18,49 +18,57 @@ const Contactus = () => {
 
     const onSubmit = (data) => {
         console.log("Form submitted:", data);
-        // Handle email submission logic here
+        // email logic to be written
     };
   return (
-    <div className="contact-container">
-            <h2 className="text-center text-4xl font-bold">Contact Me</h2>
-            <p className="text-center text-gray-400 mb-6">Get in touch</p>
-
+    <div className="contact-container" id='contact'>
+            <div className="flex flex-col items-center justify-center text-center">
+                <h2 className="contact-heading text-3xl font-bold">Contact Me</h2>
+                <p className="get-to-know mt-2 mb-4 bg-gradient-to-r from-sky-400 to-slate-50 bg-clip-text text-transparent">
+                    Get in touch
+                </p>
+            </div>
             <div className="contact-grid">
-                {/* LEFT SECTION - Contact Info */}
                 <div className="contact-info">
                     <Card className="contact-card">
-                        <div className="contact-item">
+                        <div className="flex item-center justify-center gap-3 mb-4">
                             <MessageCircle className="icon" />
                             <span>Text me</span>
                         </div>
                         <div className="contact-item">
-                            <p className="text-gray-400">Email</p>
+                            <p className="contact-item-heading">Email</p>
                             <p className="font-semibold">bishalkumarnath8@gmail.com</p>
                         </div>
                         <div className="contact-item">
-                            <p className="text-gray-400">WhatsApp</p>
+                            <p className="contact-item-heading">WhatsApp</p>
                             <p className="font-semibold">+91-7908741464</p>
-                            <Button variant="link">Text me →</Button>
+                            <Button className="m-0 p-0 " variant="link" onClick={()=> window.open("https://api.whatsapp.com/send?phone=7908741464&text=Hello, more information!","_blank")}>Text me →</Button>
                         </div>
                         <div className="contact-item">
-                            <p className="text-gray-400">Telegram</p>
-                            <p className="font-semibold"></p>
-                            <Button variant="link">Text me →</Button>
+                            <p className="contact-item-heading">Telegram</p>
+                            <p className="font-semibold">bknath</p>
+                            <Button className="m-0 p-0" variant="link" >Text me →</Button>
                         </div>
                     </Card>
                 </div>
 
                 <div className="contact-form">
-                    <Card className="p-6">
+                    <div className='contact-card'>
+                        <div className="flex item-center justify-center gap-3 mb-4">
+                            <Send className="icon mt-1" />
+                            <span>Have a query for me</span>
+                        </div>
+                    </div>
+                    
                         <Form {...form}>
                             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                                 <FormField
                                     control={form.control}
                                     name="name"
                                     render={({ field }) => (
-                                        <FormItem>
-                                            <FormLabel>Name</FormLabel>
-                                            <FormControl>
+                                        <FormItem className="mb-6">
+                                            <FormLabel className="pl-4">Name</FormLabel>
+                                            <FormControl className="FormCustom">
                                                 <Input placeholder="Your name" {...field} />
                                             </FormControl>
                                             <FormMessage />
@@ -72,9 +80,9 @@ const Contactus = () => {
                                     control={form.control}
                                     name="email"
                                     render={({ field }) => (
-                                        <FormItem>
-                                            <FormLabel>Email</FormLabel>
-                                            <FormControl>
+                                        <FormItem className="mb-6">
+                                            <FormLabel className="pl-4">Email</FormLabel>
+                                            <FormControl className="FormCustom">
                                                 <Input type="email" placeholder="Your email" {...field} />
                                             </FormControl>
                                             <FormMessage />
@@ -86,9 +94,9 @@ const Contactus = () => {
                                     control={form.control}
                                     name="message"
                                     render={({ field }) => (
-                                        <FormItem>
-                                            <FormLabel>Text</FormLabel>
-                                            <FormControl>
+                                        <FormItem className="mb-6">
+                                            <FormLabel className="pl-4">Text</FormLabel>
+                                            <FormControl className="FormCustom-txt">
                                                 <Textarea placeholder="Ask me something?" {...field} />
                                             </FormControl>
                                             <FormMessage />
@@ -96,12 +104,12 @@ const Contactus = () => {
                                     )}
                                 />
 
-                                <Button type="submit" className="w-full flex items-center justify-center gap-2">
+                                <Button type="submit" className="w-full flex items-center justify-center gap-2" style={{borderRadius:'30px' , fontSize:'18px' , padding:'22px 0px'}}>
                                     Send <Send size={18} />
                                 </Button>
                             </form>
                         </Form>
-                    </Card>
+                  
                 </div>
             </div>
         </div>

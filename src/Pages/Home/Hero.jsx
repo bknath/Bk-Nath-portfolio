@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button'
 const Hero = () => {
     return (
         <div className="wrapper-home-section">
-            <div className="content flex flex-col items-center justify-center text-center">
+            <div className="content flex flex-col items-center justify-center text-center mt-20">
                 <img src={assets.heroImg} alt="Profile" className="w-40 h-40 rounded-full border-4 border-white shadow-lg animation-fadeindown" />
                 <h1 className="namehead text-4xl font-bold mt-4 animation-fadeindown">Bishal Kumar Nath</h1>
                 <h3 className='designation'>Web Developer</h3>

@@ -40,9 +40,13 @@ const projects = [
 
 const Projects = () => {
     return (
-        <div className="wrapper-project-section flex flex-col items-center justify-center text-center">
-            <h2 className="text-3xl font-bold">My Projects</h2>
-            <p className="text-gray-400 mt-2 mb-6">Some of my recent work</p>
+        <div className="wrapper-project-section flex flex-col items-center justify-center">
+            <div className="flex flex-col items-center justify-center text-center">
+                <h2 className="project-heading text-3xl font-bold">My Projects</h2>
+                <p className="get-to-know mt-2 mb-4 bg-gradient-to-r from-sky-400 to-slate-50 bg-clip-text text-transparent">
+                    Some of my recent works
+                </p>
+            </div>
 
 
             <Carousel className="w-full max-w-3xl">
