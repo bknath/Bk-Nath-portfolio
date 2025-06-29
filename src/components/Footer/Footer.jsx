@@ -20,10 +20,10 @@ const Footer = () => {
                     </h1>
                     <p>Web Developer</p>
                     <div className="flex justify-center gap-6 mt-4 mb-6">
-                        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/bknath" target="_blank" rel="noopener noreferrer">
                             <Github size={24} className="GithubIcon hover:text-blue-400 transition-all duration-300" />
                         </a>
-                        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+                        <a href="https://linkedin.com/in/bishalnath" target="_blank" rel="noopener noreferrer">
                             <Linkedin size={24} className="LinkedinIcon" />
                         </a>
                     </div>
