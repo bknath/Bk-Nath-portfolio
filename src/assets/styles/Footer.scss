@@ -1,0 +1,24 @@
+.wrapper-footer-section{
+    margin-top: 110px;
+    margin-bottom: 50px;
+
+    .footer-heading{
+        font-size: 3rem;
+        font-weight: bold;
+        text-align: center;
+    }
+    .GithubIcon , .LinkedinIcon{
+        color: black;
+        :hover{
+            color: #085156
+        }
+        transition: all 0.12ms ease-in-out;
+    }
+    
+}
+
+.dark .wrapper-footer-section {
+    .GithubIcon , .LinkedinIcon{
+        color: white;
+    }
+}
