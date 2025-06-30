@@ -29,9 +29,9 @@ const Footer = () => {
                     </div>
                     
                     <ul className='flex gap-8 justify-center mt-4 mb-4'>
-                        <li><button onClick={() => handleScrollToSection("hero")}>Home</button></li>
-                        <li><button onClick={() => handleScrollToSection("about")}>About</button></li>
-                        <li><button onClick={() => handleScrollToSection("projects")}>Projects</button></li>
+                        <li><button onClick={() => handleScrollToSection("hero")} className='cursor-pointer'>Home</button></li>
+                        <li><button onClick={() => handleScrollToSection("about")} className='cursor-pointer'>About</button></li>
+                        <li><button onClick={() => handleScrollToSection("projects")} className='cursor-pointer'>Projects</button></li>
                     </ul>
 
                     <p className="text-center text-sm text-gray-500 dark:text-gray-400">
