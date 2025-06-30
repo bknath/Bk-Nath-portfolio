@@ -42,12 +42,12 @@ const Contactus = () => {
                         <div className="contact-item">
                             <p className="contact-item-heading">WhatsApp</p>
                             <p className="font-semibold">+91-7908741464</p>
-                            <Button className="m-0 p-0 " variant="link" onClick={()=> window.open("https://api.whatsapp.com/send?phone=7908741464&text=Hello, more information!","_blank")}>Text me →</Button>
+                            <Button className="m-0 p-0 cursor-pointer" variant="link" onClick={()=> window.open("https://api.whatsapp.com/send?phone=7908741464&text=Hello, more information!","_blank")}>Text me →</Button>
                         </div>
                         <div className="contact-item">
                             <p className="contact-item-heading">Telegram</p>
                             <p className="font-semibold">bknath</p>
-                            <Button className="m-0 p-0" variant="link" >Text me →</Button>
+                            <Button className="m-0 p-0 cursor-pointer" variant="link" >Text me →</Button>
                         </div>
                     </Card>
                 </div>
@@ -104,7 +104,7 @@ const Contactus = () => {
                                     )}
                                 />
 
-                                <Button type="submit" className="w-full flex items-center justify-center gap-2" style={{borderRadius:'30px' , fontSize:'18px' , padding:'22px 0px'}}>
+                                <Button type="submit" className="w-full flex items-center justify-center gap-2 cursor-pointer" style={{borderRadius:'30px' , fontSize:'18px' , padding:'22px 0px'}}>
                                     Send <Send size={18} />
                                 </Button>
                             </form>
