@@ -38,7 +38,7 @@ const Contactus = () => {
 
         }
         catch (error) {
-            console.error("Error submitting form:", error);
+            console.error(error);
             alert("Network error, please try again later.");
         }
     };
