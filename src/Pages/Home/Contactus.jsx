@@ -19,7 +19,7 @@ const Contactus = () => {
     const onSubmit = async (data) => {
         console.log("Form submitted:", data);
         try {
-            const response = await fetch('http://localhost:5002/apisubmit', {
+            const response = await fetch('http://localhost:5002/api/submit', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
