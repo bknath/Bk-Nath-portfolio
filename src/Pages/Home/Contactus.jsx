@@ -19,7 +19,7 @@ const Contactus = () => {
     const onSubmit = async (data) => {
         console.log("Form submitted:", data);
         try {
-            const response = await fetch('http://localhost:5002/api/submit', {
+            const response = await fetch("https://backend-portfolio-9jmn.onrender.com/api/submit", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
