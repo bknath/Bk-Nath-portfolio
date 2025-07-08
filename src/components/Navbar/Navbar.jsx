@@ -75,7 +75,7 @@ const Navbar = () => {
                     <li><Link to="/#services" onClick={() => handleScrollToSection("services")} className={activeSection === "#services" ? 'active' : ''}>Services</Link></li>
                     <li><Link to="/#projects" onClick={() => handleScrollToSection("projects")} className={activeSection === "#projects" ? 'active' : ''}>Projects</Link></li>
 
-                    <li><Link to="/#resume" onClick={() => handleScrollToSection("contact")} className={activeSection === "#contact" ? 'active' : ''}>Contact Me</Link></li>
+                    <li><Link to="/#contactme" onClick={() => handleScrollToSection("contact")} className={activeSection === "#contact" ? 'active' : ''}>Contact Me</Link></li>
                 </ul>
                 <div className='navlinks2 flex items-center'>
                     <Button variant="outline" className="cursor-pointer">Resume</Button>
