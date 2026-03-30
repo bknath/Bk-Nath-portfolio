@@ -7,6 +7,7 @@ import { MessageCircle, Send } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
+import { supabase } from '@/lib/supabase';
 const Contactus = () => {
     const form = useForm({
         defaultValues: {
@@ -16,32 +17,44 @@ const Contactus = () => {
         },
     });
 
-    const onSubmit = async (data) => {
-        console.log("Form submitted:", data);
-        try {
-            const response = await fetch("https://backend-portfolio-9jmn.onrender.com/api/submit", {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data),
-            });
-            const result = await response.json();
-            if (response.ok) {
-                console.log(result);
-                alert("Your message has been sent successfully!");
-                form.reset();
-            }
-            else {
-                alert("Something went wrong, please try again later.");
-            }
+    const onSubmit = async (values) => {
+        const {error} = await supabase.from("contact_messages").insert([values]);
 
+        if(error){
+            console.error("Error inserting data:", error);
+            alert("Something went wrong, please try again later.");
+        }else{
+            alert("Message sent 👍");
+            form.reset();
         }
-        catch (error) {
-            console.error(error);
-            alert("Network error, please try again later.");
-        }
+
     };
+    // const onSubmit = async (data) => {
+    //     console.log("Form submitted:", data);
+    //     try {
+    //         const response = await fetch("https://backend-portfolio-9jmn.onrender.com/api/submit", {
+    //             method: 'POST',
+    //             headers: {
+    //                 'Content-Type': 'application/json',
+    //             },
+    //             body: JSON.stringify(data),
+    //         });
+    //         const result = await response.json();
+    //         if (response.ok) {
+    //             console.log(result);
+    //             alert("Your message has been sent successfully!");
+    //             form.reset();
+    //         }
+    //         else {
+    //             alert("Something went wrong, please try again later.");
+    //         }
+
+    //     }
+    //     catch (error) {
+    //         console.error(error);
+    //         alert("Network error, please try again later.");
+    //     }
+    // };
     return (
         <div className="contact-container" id='contact'>
             <div className="flex flex-col items-center justify-center text-center">
