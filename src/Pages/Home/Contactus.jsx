@@ -23,10 +23,24 @@ const Contactus = () => {
         if(error){
             console.error("Error inserting data:", error);
             alert("Something went wrong, please try again later.");
-        }else{
-            alert("Message sent 👍");
-            form.reset();
+            return;
         }
+
+        try{
+            await fetch ("/.netlify/functions/send-email", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({record: values}),
+            });
+        } catch (error) {
+            console.error("Error sending email:", error);
+            alert("Something went wrong, please try again later.");
+        }
+
+        alert("Message sent 👍")
+        form.reset();
 
     };
     return (
