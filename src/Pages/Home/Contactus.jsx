@@ -29,32 +29,6 @@ const Contactus = () => {
         }
 
     };
-    // const onSubmit = async (data) => {
-    //     console.log("Form submitted:", data);
-    //     try {
-    //         const response = await fetch("https://backend-portfolio-9jmn.onrender.com/api/submit", {
-    //             method: 'POST',
-    //             headers: {
-    //                 'Content-Type': 'application/json',
-    //             },
-    //             body: JSON.stringify(data),
-    //         });
-    //         const result = await response.json();
-    //         if (response.ok) {
-    //             console.log(result);
-    //             alert("Your message has been sent successfully!");
-    //             form.reset();
-    //         }
-    //         else {
-    //             alert("Something went wrong, please try again later.");
-    //         }
-
-    //     }
-    //     catch (error) {
-    //         console.error(error);
-    //         alert("Network error, please try again later.");
-    //     }
-    // };
     return (
         <div className="contact-container" id='contact'>
             <div className="flex flex-col items-center justify-center text-center">
