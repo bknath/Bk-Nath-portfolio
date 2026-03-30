@@ -18,7 +18,7 @@ const Contactus = () => {
     });
 
     const onSubmit = async (values) => {
-        const {error} = await supabase.from("contact_messages").insert([values]);
+        const {error} = await supabase.from("Contactusform").insert([values]);
 
         if(error){
             console.error("Error inserting data:", error);
