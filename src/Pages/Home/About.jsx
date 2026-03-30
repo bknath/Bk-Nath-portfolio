@@ -23,6 +23,10 @@ const About = () => {
 
         return () => observer.disconnect();
     }, []);
+
+    const handleResumeClick = () => {
+        window.open("/resume.pdf", "_blank");
+    }
     return (
         <div id='about'>
             <div className='wrapper-about-section'>
@@ -35,7 +39,9 @@ const About = () => {
                         From designing visually stunning interfaces to developing robust web applications, I bring a mix of technical expertise, creativity, and problem-solving skills to every project. Whether it's optimizing performance, enhancing functionality, or integrating cutting-edge technologies, I'm here to transform your ideas into reality.
                         <br /> <br />
                         Let’s collaborate to build web solutions that stand out in today’s digital landscape. Get in touch, and let’s create something amazing!</p>
-                    <Button variant="outline" size="secondary" className="mt-6 cursor-pointer">Download Resume</Button>
+                    <Button variant="outline" size="secondary" className="mt-6 cursor-pointer" onClick={handleResumeClick}>
+                        Download Resume
+                    </Button>
                 </div>
             </div>
         </div>

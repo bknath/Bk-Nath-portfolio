@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { Button } from '../ui/button';
 import ThemeToggle from './ThemeToggle';
 import './../../assets/styles/Navbar.scss';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
-    const location = useLocation();
+    // const location = useLocation();
     const [activeSection, setActiveSection] = useState("#home");
 
     // Handle Navbar background change on scroll
@@ -63,6 +63,10 @@ const Navbar = () => {
             window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
+    const handleResumeClick = () => {
+        window.open("/resume.pdf", "_blank");
+    }
+
     return (
         <div>
             <nav className={`navbar p-4 flex justify-evenly items-center position-sticky top-0 z-50 ${scrolled ? 'setnavbg' : ''}`}>
@@ -77,7 +81,9 @@ const Navbar = () => {
                     <li><Link to="/#contact" onClick={() => handleScrollToSection("contact")} className={activeSection === "#contact" ? 'active' : ''}>Contact-Me</Link></li>
                 </ul>
                 <div className='navlinks2 flex items-center'>
-                    <Button variant="outline" className="cursor-pointer">Resume</Button>
+                    <Button variant="outline" className="cursor-pointer" onClick={handleResumeClick}>
+                        Resume
+                    </Button>
                     <ThemeToggle />
                 </div>
             </nav>
