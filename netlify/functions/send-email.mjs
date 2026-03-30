@@ -16,7 +16,7 @@ export async function handler(event) {
 
     const response = await resend.emails.send({
       from: "onboarding@resend.dev",
-      to: "nath.bishal@icloud.com",
+      to: "bishalkumarnath8@gmail.com",
       subject: "New Contact Form Submission",
       html: `
         <h2>New Message</h2>
