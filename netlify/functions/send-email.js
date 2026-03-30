@@ -9,8 +9,8 @@ exports.handler = async (event) => {
     const { name, email, message } = body.record;
 
     await resend.emails.send({
-      from: 'onboarding@resend.dev',
-      to: 'nath.bishal@icloud.com',
+      from: 'Acme <onboarding@resend.dev>',
+      to: ['nath.bishal@icloud.com'],
       subject: 'New Contact Form Submission',
       html: `
         <h2>New Message From Portfolio website</h2>
@@ -28,7 +28,9 @@ exports.handler = async (event) => {
     console.error(error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: 'Failed to send email' }),
+      body: JSON.stringify({
+        error: error.message,
+      }),
     };
   }
 };
